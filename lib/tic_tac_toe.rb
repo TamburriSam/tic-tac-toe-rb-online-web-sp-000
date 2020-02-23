@@ -66,9 +66,9 @@ end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win|
-  if win.all?{|y| board[y] == "X"}
+  if win.all?{|x| board[x] == "X"}
     return win
-    elsif win.all?{|y| board[y] == "O"}
+  elsif win.all?{|x| board[x] == "O"}
       return win
     end
   end
