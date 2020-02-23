@@ -104,5 +104,13 @@ end
 def play(board)
   while !over?(board) && !won?(board) && !draw?(board)
     turn(board)
+    if move(board, index, current_player = "X")
+      puts "Congratulations X!"
+    elsif move(board, index, current_player = "O")
+        puts "Congratulations O"
+      else draw?(board)
+        puts "Cat's Game!"
+      end
+    end
   end
 end
