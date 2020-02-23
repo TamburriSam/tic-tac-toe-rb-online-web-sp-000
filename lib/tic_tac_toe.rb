@@ -65,11 +65,11 @@ def current_player(board)
 end
 
 def won?(board)
-  WIN_COMBINATIONS.each do |combination|
-  if combination.all?{|x| board[x] == "X"}
+  WIN_COMBINATIONS.each do |win|
+  if win.all?{|x| board[x] == "X"}
     return win
-  elsif combination.all?{|x| board[x] == "O"}
-      return combination
+  elsif win.all?{|x| board[x] == "O"}
+      return win
     end
   end
   return false
